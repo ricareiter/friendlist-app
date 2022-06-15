@@ -1,10 +1,7 @@
 <tr id="<%= dom_id friend %>">
   <td>
-    <%= friend.first_name %>
-  </td>
-
-  <td>
-    <%= friend.last_name %>
+    <%= link_to friend.first_name, friend %>
+    <%= link_to friend.last_name, friend %>
   </td>
 
   <td>
@@ -20,14 +17,6 @@
   </td>
 
   <td>
-  <%= link_to "Show", friend %>
-  </td>
-
-  <td>
-  <%= link_to "Edit", edit_friend_path(friend) %>
-  </td>
-
-  <td>
-  <%= button_to "Delete", friend, method: :delete, data: { confirm: "Really?" } %>
+  <%= button_to "Delete", friend, method: :delete, data: { confirm: "Really?" }, class: "btn btn-outline-danger btn-sm" %>
   </td>
 </tr>
